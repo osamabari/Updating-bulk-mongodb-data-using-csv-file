@@ -1,0 +1,24 @@
+{
+  "name": "node-mongo-csv",
+  "version": "1.0.0",
+  "description": "Insert CSV data to mongodb with nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "mongodb",
+    "csv",
+    "file",
+    "reader"
+  ],
+  "author": "Afroza Yasmin",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^1.1.9",
+    "express": "^4.16.1",
+    "mongodb": "^2.2.31"
+  }
+}

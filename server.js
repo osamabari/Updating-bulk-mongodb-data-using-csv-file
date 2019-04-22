@@ -5,8 +5,8 @@ const app = express();
 const csv = require('csvtojson');
 // Import Mongodb
 const mongoClient = require('mongodb').MongoClient,
-  assert = require('assert'),
-  ObjectId = require('mongodb').ObjectId;
+  assert = require('assert');
+  //ObjectId = require('mongodb').ObjectId;
 
 // Server up and running on port 7600
 const server = app.listen(7600, (err, callback) => {
@@ -52,7 +52,7 @@ const updateDocuments = (db, callback) => {
       .on('csv', (csvRow) => {
         console.log(csvRow[0],csvRow[1])
         //updating bulk data
-        bulk.find({ _id: ObjectId(csvRow[0]) }).update({ $set: { title: csvRow[1] } });
+        bulk.find({ _id: csvRow[0] }).update({ $set: { title: csvRow[1] } });
       })
       .on('done', (error) => {
         //now excuting bulk update command to update all data
